@@ -93,7 +93,7 @@ func (h *HashRing) generateCircle() {
 			nodeKey := fmt.Sprintf("%s-%d", node, j)
 			bKey := hashDigest(nodeKey)
 
-			for i := 0; i < 3; i++ {
+			for i := 0; i < 4; i++ {
 				key := hashVal(bKey[i*4 : i*4+4])
 				h.ring[key] = node
 				h.sortedKeys = append(h.sortedKeys, key)
